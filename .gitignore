@@ -1,0 +1,30 @@
+# XC8 build output
+*.d
+*.p1
+*.o
+*.s
+*.lst
+*.rlf
+*.sdb
+*.sym
+*.cmf
+*.hxl
+*.elf
+*.map
+*.hex
+
+# MPLAB X / IPE
+MPLABXLog.xml
+*.log
+nbproject/private/
+build/
+dist/
+
+# Editors and OS
+.vscode/
+.idea/
+*.bak
+*~
+Thumbs.db
+desktop.ini
+.DS_Store
