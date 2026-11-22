@@ -94,7 +94,7 @@ Full pinout and wiring: [`docs/hardware.md`](docs/hardware.md).
 | MPLAB X IDE / IPE | v6.20 | `ipecmd` command-line programmer |
 | PIC12-16F1xxx device pack | 1.7.242 | Device support |
 | PICkit 5 | firmware 02.03.64 | In-circuit programming |
-| Claude Code | — | Development assistant (see [`docs/development.md`](docs/development.md)) |
+| Claude Code | — | AI development assistant (see [AI-assisted development](#ai-assisted-development)) |
 
 The firmware is a single C file without an IDE project. It builds from the
 command line, see [Building and flashing](#9-building-and-flashing).
@@ -237,6 +237,17 @@ The LED flashes N times, pauses, and repeats:
 | 3 | I²C timeout or bus collision |
 | 5 | ADXL345 not found (also shown on the OLED with an I²C bus scan) |
 | 6 | EEPROM not found |
+
+## AI-assisted development
+
+This project was built with **Claude Code** (Anthropic) as a development
+assistant. Claude Code wrote most of the firmware source and the documentation
+drafts, and ran the command-line build and programming tools. The author
+defined the requirements, built and wired the hardware, found and fixed the
+wiring faults, ran and observed all bench tests, chose the next step at each
+stage, and reviewed the code and documentation. All test results in this
+repository come from the author's own observations on the hardware. Details:
+[`docs/development.md`](docs/development.md#development-approach).
 
 ## Repository layout
 

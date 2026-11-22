@@ -7,10 +7,22 @@ stated otherwise.
 
 ## Development approach
 
-The firmware was developed with Claude Code as an AI development assistant.
-The author assembled and wired the hardware, ran the tests and reported back
-the observations recorded below. Each stage was flashed and checked on the
-hardware before the next part was added. **[confirm wording]**
+This project was developed with **Claude Code** (Anthropic) as an AI
+development assistant. The split of work:
+
+| Claude Code | Author |
+|---|---|
+| Wrote most of the firmware source (`blink/`, `oled/`, `logger/`) | Set the design requirements and chose the components |
+| Looked up register and pin details in the XC8 headers and Microchip device files | Assembled and wired the breadboard |
+| Ran the command-line build (`xc8-cc`) and programming (`ipecmd`) | Found the physical faults: loose MCLR wire, SDA on the wrong pin |
+| Proposed fixes from the symptoms the author reported | Ran every bench test and reported the results: display readings, stopwatch timing, drop test |
+| Drafted this documentation | Decided which feature to build next; reviewed the code and documentation |
+
+Development went in small steps. Each change was compiled, flashed, verified
+by the programmer and then checked on the hardware by the author before the
+next part was added. Claude Code had no direct view of the hardware: every
+result in the **Tests performed** section is what the author observed. Nothing
+was simulated or assumed. **[confirm wording]**
 
 ## Timeline
 
